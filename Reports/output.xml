@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-18T01:06:03.497249" rpa="false" schemaversion="5">
+<suite id="s1" name="Booking Test" source="C:\Users\faras\Documents\robotFrameworkAutomationForBookingAppointment\robotFrameworkAutomationForBookingAppointment\tests\testsFilesUsingBDD\booking_test.robot">
+<test id="s1-t1" name="Booking an Appointment" line="6">
+<kw name="Navigate To CURA Homepage" owner="booking_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:03.726161" level="INFO">Opening browser 'chrome' to base url 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>https://katalon-demo-cura.herokuapp.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-18T01:06:03.726161" elapsed="11.985392"/>
+</kw>
+<doc>Navigate to the CURA Healthcare homepage</doc>
+<status status="PASS" start="2024-09-18T01:06:03.721237" elapsed="11.990316"/>
+</kw>
+<kw name="Click On Make Appointment Button" owner="booking_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:15.711553" level="INFO">Clicking element 'xpath=//*[@id="btn-make-appointment"]'.</msg>
+<arg>${MAKE_APPOINTMENT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:15.711553" elapsed="0.569542"/>
+</kw>
+<doc>Click the "Make Appointment" button</doc>
+<status status="PASS" start="2024-09-18T01:06:15.711553" elapsed="0.569542"/>
+</kw>
+<kw name="Should See Login Page" owner="booking_keywords">
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:16.291183" level="INFO">Current location contains '/profile.php#login'.</msg>
+<arg>${LOGIN_PAGE_URL}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-09-18T01:06:16.281095" elapsed="0.010088"/>
+</kw>
+<doc>Verify the login page is displayed</doc>
+<status status="PASS" start="2024-09-18T01:06:16.281095" elapsed="0.010088"/>
+</kw>
+<kw name="Log In As John Doe With Password ThisIsNotAPassword" owner="booking_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:16.291183" level="INFO">Typing text 'John Doe' into text field 'id=txt-username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>John Doe</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:16.291183" elapsed="0.195624"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:16.487907" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'id=txt-password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>ThisIsNotAPassword</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:16.487907" elapsed="0.145614"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:16.633521" level="INFO">Clicking button 'id=btn-login'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:16.633521" elapsed="0.631684"/>
+</kw>
+<doc>Log in with username and password</doc>
+<status status="PASS" start="2024-09-18T01:06:16.291183" elapsed="0.974022"/>
+</kw>
+<kw name="Should Be Redirected To Appointment Page" owner="booking_keywords">
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:17.295483" level="INFO">Current location contains '/#appointment'.</msg>
+<arg>${APPOINTMENT_PAGE_URL}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-09-18T01:06:17.270206" elapsed="0.025277"/>
+</kw>
+<doc>Verify redirection to the appointment page</doc>
+<status status="PASS" start="2024-09-18T01:06:17.270206" elapsed="0.025277"/>
+</kw>
+<kw name="Make Appointment For Future Date" owner="booking_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:17.295483" level="INFO">Typing text '19/07/2024' into text field 'id=txt_visit_date'.</msg>
+<arg>${VISIT_DATE_FIELD}</arg>
+<arg>19/07/2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:17.295483" elapsed="0.192871"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:17.488354" level="INFO">Typing text 'Automation Test' into text field 'id=txt_comment'.</msg>
+<arg>${COMMENT_FIELD}</arg>
+<arg>Automation Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:17.488354" elapsed="0.129013"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:17.617367" level="INFO">Clicking button 'id=btn-book-appointment'.</msg>
+<arg>${BOOK_APPOINTMENT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:17.617367" elapsed="0.277658"/>
+</kw>
+<doc>Make an appointment for a future date</doc>
+<status status="PASS" start="2024-09-18T01:06:17.295483" elapsed="0.599542"/>
+</kw>
+<kw name="Should See Appointment In History" owner="booking_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:17.896687" level="INFO">Clicking element 'id=menu-toggle'.</msg>
+<arg>${MENU_TOGGLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:17.896687" elapsed="0.118193"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:18.014880" level="INFO">Clicking element 'xpath=//a[contains(text(), 'History')]'.</msg>
+<arg>${HISTORY_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:18.014880" elapsed="0.445380"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:18.467447" level="INFO">Current location contains '/history.php#history'.</msg>
+<arg>${HISTORY_PAGE_URL}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-09-18T01:06:18.460260" elapsed="0.007187"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:18.502409" level="INFO">Current page contains text '19/07/2024'.</msg>
+<arg>19/07/2024</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-18T01:06:18.467447" elapsed="0.034962"/>
+</kw>
+<doc>Verify the appointment is listed in the history</doc>
+<status status="PASS" start="2024-09-18T01:06:17.896687" elapsed="0.605722"/>
+</kw>
+<kw name="Log Out Successfully" owner="booking_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:18.502409" level="INFO">Clicking element 'id=menu-toggle'.</msg>
+<arg>${MENU_TOGGLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:18.502409" elapsed="0.075770"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:18.583285" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Logout')]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-18T01:06:18.578179" elapsed="0.912785"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-18T01:06:19.503245" level="INFO">Current location contains 'https://katalon-demo-cura.herokuapp.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-09-18T01:06:19.490964" elapsed="0.012281"/>
+</kw>
+<doc>Log out from the application</doc>
+<status status="PASS" start="2024-09-18T01:06:18.502409" elapsed="1.000836"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T01:06:03.721237" elapsed="15.782008"/>
+</test>
+<status status="PASS" start="2024-09-18T01:06:03.497249" elapsed="16.011029"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Booking Test">Booking Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
