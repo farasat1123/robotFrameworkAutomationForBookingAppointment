@@ -8,7 +8,6 @@ The project is organized as follows:
 
 project/ ├── resources/ │ ├── keywords/ │ │ └── booking_keywords.robot │ ├── locators/ │ │ └── appointment_locators.robot ├── tests/ │ ├── feature_files/ │ │ └── booking.feature │ └── testFilesUsingBDD/ │ └── booking_test.robot
 
-
 - **resources/keywords/**: Contains reusable keywords for booking appointment functionality.
 - **resources/locators/**: Contains locators used in the test cases.
 - **tests/feature_files/**: Contains BDD feature files describing the test scenarios.
